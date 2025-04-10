@@ -1,0 +1,512 @@
+[
+  {
+    "name": "deepseek-ai",
+    "numUsers": 29,
+    "numModels": 68,
+    "numFollowers": 46609,
+    "country": "China",
+    "city": "Hangzhou",
+    "latitude": 30.2489634,
+    "longitude": 120.2052342
+  },
+  {
+    "name": "microsoft",
+    "numUsers": 231,
+    "numModels": 363,
+    "numFollowers": 10347,
+    "country": "U.S.",
+    "city": "Redmond",
+    "latitude": 47.6694141,
+    "longitude": -122.1238767
+  },
+  {
+    "name": "CohereForAI",
+    "numUsers": 54,
+    "numModels": 16,
+    "numFollowers": 1266,
+    "country": "Canada",
+    "city": "Toronto",
+    "latitude": 43.6534817,
+    "longitude": -79.3839347
+  },
+  {
+    "name": "tencent",
+    "numUsers": 123,
+    "numModels": 10,
+    "numFollowers": 2528,
+    "country": "China",
+    "city": "Shenzhen",
+    "latitude": 22.5445741,
+    "longitude": 114.0545429
+  },
+  {
+    "name": "allenai",
+    "numUsers": 158,
+    "numModels": 396,
+    "numFollowers": 2844,
+    "country": "U.S.",
+    "city": "Seattle",
+    "latitude": 47.6038321,
+    "longitude": -122.330062
+  },
+  {
+    "name": "Lightricks",
+    "numUsers": 22,
+    "numModels": 4,
+    "numFollowers": 623,
+    "country": "Israel",
+    "city": "Jerusalem",
+    "latitude": 31.7788242,
+    "longitude": 35.2257626
+  },
+  {
+    "name": "openai",
+    "numUsers": 64,
+    "numModels": 33,
+    "numFollowers": 6038,
+    "country": "United States",
+    "city": "San Francisco",
+    "latitude": 37.7792588,
+    "longitude": -122.4193286
+  },
+  {
+    "name": "mistralai",
+    "numUsers": 72,
+    "numModels": 23,
+    "numFollowers": 6203,
+    "country": "France",
+    "city": "Paris",
+    "latitude": 48.8588897,
+    "longitude": 2.3200410217200766
+  },
+  {
+    "name": "amd",
+    "numUsers": 189,
+    "numModels": 99,
+    "numFollowers": 1400,
+    "country": "United States",
+    "city": "Santa Clara",
+    "latitude": 37.3541132,
+    "longitude": -121.955174
+  },
+  {
+    "name": "BAAI",
+    "numUsers": 64,
+    "numModels": 128,
+    "numFollowers": 1399,
+    "country": "China",
+    "city": "Beijing",
+    "latitude": 40.190632,
+    "longitude": 116.412144
+  },
+  {
+    "name": "nvidia",
+    "numUsers": 1911,
+    "numModels": 291,
+    "numFollowers": 18719,
+    "country": "U.S.",
+    "city": "Santa Clara",
+    "latitude": 37.3541132,
+    "longitude": -121.955174
+  },
+  {
+    "name": "mlx-community",
+    "numUsers": 2429,
+    "numModels": 1747,
+    "numFollowers": 4142,
+    "country": "U.S.",
+    "city": "Sunnyvale",
+    "latitude": 37.3688301,
+    "longitude": -122.036349
+  },
+  {
+    "name": "yandex",
+    "numUsers": 12,
+    "numModels": 3,
+    "numFollowers": 230,
+    "country": "Russia",
+    "city": "Moscow",
+    "latitude": 55.625578,
+    "longitude": 37.6063916
+  },
+  {
+    "name": "google",
+    "numUsers": 2092,
+    "numModels": 968,
+    "numFollowers": 9674,
+    "country": "U.S.",
+    "city": "Mountain View",
+    "latitude": 37.3893889,
+    "longitude": -122.0832101
+  },
+  {
+    "name": "Salesforce",
+    "numUsers": 400,
+    "numModels": 139,
+    "numFollowers": 1142,
+    "country": "United States",
+    "city": "San Francisco",
+    "latitude": 37.7792588,
+    "longitude": -122.4193286
+  },
+  {
+    "name": "Skywork",
+    "numUsers": 37,
+    "numModels": 19,
+    "numFollowers": 335,
+    "country": "Switzerland",
+    "city": "Belp",
+    "latitude": 46.88978,
+    "longitude": 7.498388
+  },
+  {
+    "name": "ByteDance",
+    "numUsers": 387,
+    "numModels": 19,
+    "numFollowers": 1478,
+    "country": "China",
+    "city": "Haidian",
+    "latitude": 39.9580718,
+    "longitude": 116.292405
+  },
+  {
+    "name": "MiniMaxAI",
+    "numUsers": 40,
+    "numModels": 2,
+    "numFollowers": 573,
+    "country": "China",
+    "city": "Shanghai",
+    "latitude": 31.2312707,
+    "longitude": 121.4700152
+  },
+  {
+    "name": "MBZUAI",
+    "numUsers": 199,
+    "numModels": 77,
+    "numFollowers": 373,
+    "country": "United Arab Emirates",
+    "city": "Masdar City",
+    "latitude": 24.42748265,
+    "longitude": 54.6234876171374
+  },
+  {
+    "name": "bytedance-research",
+    "numUsers": 11,
+    "numModels": 11,
+    "numFollowers": 335,
+    "country": "China",
+    "city": "Beijing",
+    "latitude": 40.190632,
+    "longitude": 116.412144
+  },
+  {
+    "name": "open-r1",
+    "numUsers": 31,
+    "numModels": 3,
+    "numFollowers": 1230,
+    "country": "China",
+    "city": "Hangzhou",
+    "latitude": 30.2489634,
+    "longitude": 120.2052342
+  },
+  {
+    "name": "t-tech",
+    "numUsers": 13,
+    "numModels": 7,
+    "numFollowers": 298,
+    "country": "United States",
+    "city": "Buffalo",
+    "latitude": 42.8867166,
+    "longitude": -78.8783922
+  },
+  {
+    "name": "SakanaAI",
+    "numUsers": 24,
+    "numModels": 20,
+    "numFollowers": 348,
+    "country": "Japan",
+    "city": "Tokyo",
+    "latitude": 35.6768601,
+    "longitude": 139.7638947
+  },
+  {
+    "name": "TIGER-Lab",
+    "numUsers": 27,
+    "numModels": 59,
+    "numFollowers": 225,
+    "country": "China",
+    "city": "Hangzhou",
+    "latitude": 30.2489634,
+    "longitude": 120.2052342
+  },
+  {
+    "name": "lmsys",
+    "numUsers": 4,
+    "numModels": 24,
+    "numFollowers": 593,
+    "country": "France",
+    "city": "Paris",
+    "latitude": 48.8588897,
+    "longitude": 2.3200410217200766
+  },
+  {
+    "name": "amazon",
+    "numUsers": 2214,
+    "numModels": 11,
+    "numFollowers": 2859,
+    "country": "U.S.",
+    "city": "Seattle",
+    "latitude": 47.6038321,
+    "longitude": -122.330062
+  },
+  {
+    "name": "alibaba-pai",
+    "numUsers": 259,
+    "numModels": 85,
+    "numFollowers": 430,
+    "country": "China",
+    "city": "Hangzhou",
+    "latitude": 30.2489634,
+    "longitude": 120.2052342
+  },
+  {
+    "name": "NovaSky-AI",
+    "numUsers": 3,
+    "numModels": 8,
+    "numFollowers": 367,
+    "country": "Israel",
+    "city": "Eshkol Regional Council",
+    "latitude": 31.2542528,
+    "longitude": 34.40944531554104
+  },
+  {
+    "name": "cyberagent",
+    "numUsers": 169,
+    "numModels": 19,
+    "numFollowers": 514,
+    "country": "Japan",
+    "city": "Tokyo",
+    "latitude": 35.6768601,
+    "longitude": 139.7638947
+  },
+  {
+    "name": "PekingU",
+    "numUsers": 346,
+    "numModels": 11,
+    "numFollowers": 385,
+    "country": "China",
+    "city": "Beijing",
+    "latitude": 40.190632,
+    "longitude": 116.412144
+  },
+  {
+    "name": "Rakuten",
+    "numUsers": 121,
+    "numModels": 7,
+    "numFollowers": 204,
+    "country": "Japan",
+    "city": "Tokyo",
+    "latitude": 35.6768601,
+    "longitude": 139.7638947
+  },
+  {
+    "name": "Intel",
+    "numUsers": 1836,
+    "numModels": 219,
+    "numFollowers": 2342,
+    "country": "United States",
+    "city": "Santa Clara",
+    "latitude": 37.3541132,
+    "longitude": -121.955174
+  },
+  {
+    "name": "espnet",
+    "numUsers": 145,
+    "numModels": 536,
+    "numFollowers": 216,
+    "country": "USA",
+    "city": "Bristol",
+    "latitude": 51.4538022,
+    "longitude": -2.5972985
+  },
+  {
+    "name": "huggingface",
+    "numUsers": 209,
+    "numModels": 16,
+    "numFollowers": 25882,
+    "country": "United States",
+    "city": "New York City",
+    "latitude": 40.7127281,
+    "longitude": -74.0060152
+  },
+  {
+    "name": "cerebras",
+    "numUsers": 100,
+    "numModels": 17,
+    "numFollowers": 518,
+    "country": "US",
+    "city": "Sunnyvale",
+    "latitude": 37.3688301,
+    "longitude": -122.036349
+  },
+  {
+    "name": "Cohere",
+    "numUsers": 25,
+    "numModels": 11,
+    "numFollowers": 221,
+    "country": "Canada",
+    "city": "Toronto",
+    "latitude": 43.6534817,
+    "longitude": -79.3839347
+  },
+  {
+    "name": "databricks",
+    "numUsers": 619,
+    "numModels": 6,
+    "numFollowers": 1230,
+    "country": "United States",
+    "city": "San Francisco",
+    "latitude": 37.7792588,
+    "longitude": -122.4193286
+  },
+  {
+    "name": "cisco-ai",
+    "numUsers": 817,
+    "numModels": 3,
+    "numFollowers": 968,
+    "country": "U.S.",
+    "city": "San Jose",
+    "latitude": 37.3361663,
+    "longitude": -121.890591
+  },
+  {
+    "name": "Salesforce",
+    "numUsers": 400,
+    "numModels": 139,
+    "numFollowers": 1142,
+    "country": "United States",
+    "city": "San Francisco",
+    "latitude": 37.7792588,
+    "longitude": -122.4193286
+  },
+  {
+    "name": "01-ai",
+    "numUsers": 33,
+    "numModels": 28,
+    "numFollowers": 665,
+    "country": "China",
+    "city": "Beijing",
+    "latitude": 40.190632,
+    "longitude": 116.412144
+  },
+  {
+    "name": "OpenLLM-France",
+    "numUsers": 103,
+    "numModels": 11,
+    "numFollowers": 257,
+    "country": "France",
+    "city": "Paris",
+    "latitude": 48.8588897,
+    "longitude": 2.3200410217200766
+  },
+  {
+    "name": "Mozilla",
+    "numUsers": 15,
+    "numModels": 47,
+    "numFollowers": 226,
+    "country": "United States",
+    "city": "San Francisco",
+    "latitude": 37.7792588,
+    "longitude": -122.4193286
+  },
+  {
+    "name": "MediaTek-Research",
+    "numUsers": 21,
+    "numModels": 17,
+    "numFollowers": 223,
+    "country": "Taiwan",
+    "city": "Hsinchu",
+    "latitude": 24.8066333,
+    "longitude": 120.9686833
+  },
+  {
+    "name": "qualcomm",
+    "numUsers": 13,
+    "numModels": 181,
+    "numFollowers": 471,
+    "country": "U.S.",
+    "city": "San Diego",
+    "latitude": 32.7174202,
+    "longitude": -117.162772
+  },
+  {
+    "name": "QuantFactory",
+    "numUsers": 3,
+    "numModels": 1344,
+    "numFollowers": 427,
+    "country": "US",
+    "city": "Old Greenwich",
+    "latitude": 41.022875,
+    "longitude": -73.564846
+  },
+  {
+    "name": "instructlab",
+    "numUsers": 22,
+    "numModels": 7,
+    "numFollowers": 307,
+    "country": "United States",
+    "city": "Armonk",
+    "latitude": 41.132973,
+    "longitude": -73.71260642942585
+  },
+  {
+    "name": "infosys",
+    "numUsers": 663,
+    "numModels": 2,
+    "numFollowers": 717,
+    "country": "India",
+    "city": "Bengaluru",
+    "latitude": 12.98815675,
+    "longitude": 77.62260003796
+  },
+  {
+    "name": "Groq",
+    "numUsers": 47,
+    "numModels": 2,
+    "numFollowers": 206,
+    "country": "US",
+    "city": "Mountain View",
+    "latitude": 37.3893889,
+    "longitude": -122.0832101
+  },
+  {
+    "name": "Kwai-Kolors",
+    "numUsers": 14,
+    "numModels": 8,
+    "numFollowers": 778,
+    "country": "Poland",
+    "city": "",
+    "latitude": 52.215933,
+    "longitude": 19.134422
+  },
+  {
+    "name": "mistral-community",
+    "numUsers": 23,
+    "numModels": 14,
+    "numFollowers": 248,
+    "country": "France",
+    "city": "Paris",
+    "latitude": 48.8588897,
+    "longitude": 2.3200410217200766
+  },
+  {
+    "name": "Samsung",
+    "numUsers": 600,
+    "numModels": 2,
+    "numFollowers": 655,
+    "country": "South Korea",
+    "city": "Seoul",
+    "latitude": 37.5666791,
+    "longitude": 126.9782914
+  }
+]

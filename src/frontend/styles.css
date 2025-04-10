@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8f9fa;
+    color: #2d3748;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #1a202c;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 500px; /* Default height for regular charts */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Specific heights for different chart types */
+.chart-container:nth-child(3),  /* Task Categories */
+.chart-container:nth-child(6) { /* Top Downloads */
+    height: 800px; /* Taller height for horizontal bar charts */
+}
+
+.chart-container:nth-child(7) { /* Top 5 Models by Downloads for Major Tech Companies */
+    height: 900px; /* Even taller height for the tech companies chart */
+}
+
+.chart-container.bubble-chart {
+    /* height: 1000px !important; */ /* Removed fixed height */
+    margin-bottom: 2rem;
+}
+
+.chart-container.growth-chart {
+    /* height: 900px !important; */ /* Removed fixed height */
+    margin-bottom: 2rem;
+}
+
+.chart-info {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-size: 0.9rem;
+    color: #4A5568;
+}
+
+.chart-info p {
+    margin-bottom: 0.5rem;
+}
+
+.chart-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Canvas styles */
+canvas {
+    display: block !important;
+    max-width: 100% !important;
+    height: 100% !important;
+}
+
+/* Specific styles for the bubble chart canvas */
+#modelPopularityChart {
+    /* height: 900px !important; */ /* Removed fixed height */
+}
+
+/* Specific styles for the tech companies chart */
+#topDownloadsChart {
+    height: 800px !important;
+}
+
+/* Specific styles for the growth chart */
+#modelGrowthChart {
+    /* height: 800px !important; */ /* Removed fixed height */
+}
+
+/* Swiper Carousel Styles */
+.model-carousel {
+    width: 100%;
+    max-width: 1200px; /* Limit max width */
+    height: 650px; /* Set a fixed height for the carousel */
+    margin: 30px auto; /* Center the carousel */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure slide takes full height */
+    padding: 20px; /* Add padding inside the slide */
+    box-sizing: border-box;
+}
+
+.swiper-slide .chart-container {
+    width: 100%;
+    height: 100%; /* Make chart container take full slide height */
+    display: flex;
+    flex-direction: column;
+    /* Reset margin/padding if needed */
+    margin: 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: none; /* Remove individual shadow if carousel has one */
+    min-height: 500px; /* Ensure a minimum height for content like the globe */
+}
+
+/* Adjust canvas size within container */
+.swiper-slide .chart-container canvas {
+    flex-grow: 1; /* Allow canvas to grow */
+    position: relative;
+    max-height: calc(100% - 50px); /* Subtract title height approx */
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333; /* Darker color for better visibility */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 20px; /* Adjust icon size */
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+    background: #aaa;
+    opacity: 0.7;
+    width: 10px;
+    height: 10px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #333;
+    opacity: 1;
+}
+
+/* Optional: Add some more visual flair */
+body {
+    background-color: #f0f2f5; /* Lighter background */
+}
+
+.container h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Globe Styles */
+#globe-container {
+    /* width: 100%; */ /* Remove fixed width, let wrapper control */
+    height: 100%;
+    cursor: grab;
+    flex-grow: 1; /* Allow globe to take remaining space */
+    position: relative; /* Needed for canvas positioning if required */
+}
+
+#globe-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Styles for content within the globe slide */
+.globe-slide-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-grow: 1; /* Allow content to fill chart container */
+    overflow: hidden;
+    position: relative; /* Ensure children are positioned correctly */
+}
+
+/* Styles for the sidebar within the slide */
+#country-sidebar {
+    width: 180px; /* Slightly smaller width for slide context */
+    flex-shrink: 0;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    border-left: 1px solid #e2e8f0;
+    overflow-y: auto;
+    height: 100%; /* Fill the content wrapper height */
+}
+
+#country-sidebar h3 {
+    font-size: 1rem; /* Adjust size */
+    color: #4A5568;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#country-list li {
+    font-size: 0.85rem; /* Adjust size */
+    color: #2d3748;
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#country-list li span:first-child {
+    font-weight: 500;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px; /* Prevent long names from breaking layout */
+}
+
+#country-list li span:last-child {
+    font-weight: bold;
+    color: #718096;
+}
+
+/* Styles for the standalone globe container - REMOVED */
+/*
+.chart-container.globe-standalone {
+    height: 800px; 
+    margin-top: 2rem; 
+    padding: 1rem; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.chart-container.globe-standalone h2 {
+    margin-bottom: 1rem; 
+    flex-shrink: 0; 
+}
+
+#globe-wrapper {
+    display: flex;
+    flex-direction: row; 
+    height: 100%;
+    flex-grow: 1; 
+    overflow: hidden; 
+}
+
+#country-sidebar {
+    width: 200px; 
+    flex-shrink: 0; 
+    padding-left: 1rem; 
+    border-left: 1px solid #e2e8f0; 
+    overflow-y: auto; 
+    height: 100%; 
+}
+
+#country-sidebar h3 {
+    font-size: 1.1rem;
+    color: #4A5568;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#country-list li {
+    font-size: 0.9rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#country-list li span:first-child {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+#country-list li span:last-child {
+    font-weight: bold;
+    color: #718096;
+}
+*/
+
+/* Ensure swiper slide chart container has enough height */
+.swiper-slide .chart-container {
+    /* ... existing styles ... */
+    min-height: 500px; /* Ensure a minimum height for content like the globe */
+} 

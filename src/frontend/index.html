@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Models Analytics</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Original Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js and Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+    <!-- Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Models Evolution</h1>
+
+        <!-- Swiper -->
+        <div class="swiper model-carousel">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>Model Categories Distribution</h2>
+                        <canvas id="modelCategoryChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>Top 20 AI Model Task Categories</h2>
+                        <canvas id="taskCategoryChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>Top 20 Creators by Number of Models Published</h2>
+                        <canvas id="topCreatorsChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>AI Models Published by Major Tech Companies</h2>
+                        <canvas id="techCompaniesChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>AI Model Categories Published by Major Tech Companies</h2>
+                        <canvas id="techCompanyCategoriesChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>Top 5 Models by Downloads for Major Tech Companies</h2>
+                        <canvas id="topDownloadsChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="swiper-slide">
+                    <div class="chart-container bubble-chart" id="bubbleChartContainer">
+                        <h2>AI Model Size and Popularity Over Time</h2>
+                        <canvas id="modelPopularityChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="swiper-slide">
+                    <div class="chart-container growth-chart" id="modelGrowthContainer">
+                        <h2>Growth of AI Models Over Time</h2>
+                        <canvas id="modelGrowthChart"></canvas>
+                    </div>
+                </div>
+                <!-- Slide 9: Globe -->
+                <div class="swiper-slide">
+                    <div class="chart-container">
+                        <h2>Organization Locations</h2>
+                        <div class="globe-slide-content">
+                            <div id="globe-container"></div>
+                            <div id="country-sidebar">
+                                <h3>Top 10 Countries</h3>
+                                <ul id="country-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <!-- End Swiper -->
+
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/globe.js"></script>
+</body>
+</html> 
