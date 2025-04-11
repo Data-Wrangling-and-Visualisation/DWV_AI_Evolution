@@ -82,8 +82,37 @@ The application will use the standard data visualization pipeline:
    - Shows dynamic changes in models' popularity, measured by the number of mentions on Twitter.
    - Each bar represents a model, where its length and position in ranking show popularity. Bars dynamically change in length and ranking to reflect popularity shifts over time.
 
+## Checkpoint 2
+
+This checkpoint marks the implementation of several key components:
+
+1.  **Organization Data Collection Pipeline**: Added a pipeline to collect data about the top organizations on Hugging Face, complementing the existing model metadata collection.
+2.  **Backend Implementation**: Developed a backend using Flask to serve the collected model and organization data via a REST API.
+3.  **Frontend Development**: Built the frontend interface using HTML, CSS, and JavaScript.
+    - Implemented a carousel (`Swiper.js`) for navigation.
+    - Created interactive visualizations using Chart.js and D3.js, including:
+        - Model Category Distribution (Pie Chart)
+        - Top Task Categories (Bar Chart)
+        - Model Popularity & Size Evolution (Bubble Chart - Chart.js)
+        - Model Growth Over Time (Stacked Area Chart)
+        - Top Creators (Bar Chart)
+        - Major Tech Company Contributions (Bar Chart)
+        - Major Tech Company Model Categories (Pie Chart)
+        - Major Tech Company Top Models (Bar Chart)
+        - Organization Locations (3D Globe - Three.js)
+        - Organizations by Model Count (Bubble Chart - D3.js)
+        - Top Organizations by Followers (Bar Chart - D3.js)
+        - Top Organizations by Contributors (Bar Chart - D3.js)
+4.  **Containerization**: Packaged the application components (backend, frontend, database) into Docker containers and orchestrated them using Docker Compose for easier setup and deployment.
+
 ## Acknowledgments
 
-- HuggingFace for providing the model metadata.
-- Wikipedia, GitHub, and Twitter for additional data sources.
-- The open-source community for tools like BeautifulSoup, Selenium, Pandas, and D3.js.
+- **Data Sources**:
+    - HuggingFace for providing the model metadata.
+    - Wikipedia and GitHub for additional company/organization details.
+- **Technologies & Libraries**:
+    - The open-source community for essential tools like:
+        - *Backend*: Flask
+        - *Data Handling*: Pandas, BeautifulSoup
+        - *Frontend*: Chart.js, D3.js, Swiper.js, Three.js
+        - *Containerization*: Docker, Docker Compose
