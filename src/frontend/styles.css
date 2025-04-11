@@ -339,4 +339,16 @@ body {
 .swiper-slide .chart-container {
     /* ... existing styles ... */
     min-height: 500px; /* Ensure a minimum height for content like the globe */
-} 
+}
+
+/* Add some space below the tech company categories chart */
+#techCompanyCategoriesChartContainer {
+  margin-bottom: 60px; /* Increased margin to ensure clearance */
+}
+
+/* Optional: Add general bottom margin to all chart containers if needed */
+/*
+.chart-container {
+  margin-bottom: 20px; 
+}
+*/ 

@@ -6,6 +6,7 @@ import { createTechCompanyCategoriesChart } from './charts/techCompanyCategories
 import { createTopDownloadsChart } from './charts/topDownloads.js';
 import { createModelPopularityChart } from './charts/modelPopularity.js';
 import { createModelGrowthChart } from './charts/modelGrowth.js';
+import { hideInfoPopup } from './globe.js';
 
 // Initialize Swiper and then charts
 document.addEventListener('DOMContentLoaded', async () => {
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         grabCursor: true,
         spaceBetween: 30,
         centeredSlides: true,
+        allowTouchMove: false,
 
         // If we need pagination
         pagination: {
@@ -28,6 +30,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+
+    // ADD: Event listener to hide globe popup on slide change
+    swiper.on('slideChange', () => {
+        hideInfoPopup();
     });
 
     // Initialize all charts

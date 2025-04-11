@@ -70,7 +70,8 @@ async function createTechCompanyCategoriesChart() {
             plugins: {
                 legend: {
                     display: true,
-                    position: 'right',
+                    position: 'top',
+                    align: 'center',
                     labels: {
                         font: {
                             size: 12

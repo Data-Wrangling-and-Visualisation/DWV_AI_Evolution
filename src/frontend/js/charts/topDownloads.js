@@ -96,7 +96,8 @@ async function createTopDownloadsChart() {
             plugins: {
                 legend: {
                     display: true,
-                    position: 'right',
+                    position: 'top',
+                    align: 'center',
                     title: {
                         display: true,
                         text: 'Companies',
@@ -166,6 +167,7 @@ async function createTopDownloadsChart() {
                         display: false
                     },
                     ticks: {
+                        display: false,
                         font: {
                             size: 11
                         }
@@ -198,7 +200,22 @@ async function createTopDownloadsChart() {
                     ctx.textAlign = 'left';
                     ctx.textBaseline = 'middle';
                     ctx.font = 'bold 11px Arial';
-                    ctx.fillText(`${model} ${formattedDownloads}`, xPos, yPos);
+
+                    const fullText = `${model} ${formattedDownloads}`;
+                    const textWidth = ctx.measureText(fullText).width;
+                    const availableWidth = chart.chartArea.right - xPos;
+
+                    // Only draw text if it fits, otherwise draw only downloads
+                    if (textWidth < availableWidth) {
+                        ctx.fillText(fullText, xPos, yPos);
+                    } else {
+                        // Optionally, draw only downloads if full text doesn't fit
+                        const downloadsTextWidth = ctx.measureText(formattedDownloads).width;
+                        if (downloadsTextWidth < availableWidth) {
+                             ctx.fillText(formattedDownloads, xPos, yPos);
+                        }
+                        // If even downloads don't fit, draw nothing for this bar
+                    }
                 });
             }
         }]

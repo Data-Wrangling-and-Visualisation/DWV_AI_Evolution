@@ -61,7 +61,7 @@
                 </div>
                 <!-- Slide 5 -->
                 <div class="swiper-slide">
-                    <div class="chart-container">
+                    <div class="chart-container" id="techCompanyCategoriesChartContainer">
                         <h2>AI Model Categories Published by Major Tech Companies</h2>
                         <canvas id="techCompanyCategoriesChart"></canvas>
                     </div>
@@ -92,7 +92,7 @@
                     <div class="chart-container">
                         <h2>Organization Locations</h2>
                         <div class="globe-slide-content">
-                            <div id="globe-container"></div>
+                            <div id="globe-container" style="height: 500px; width: 100%;"></div>
                             <div id="country-sidebar">
                                 <h3>Top 10 Countries</h3>
                                 <ul id="country-list"></ul>
@@ -103,12 +103,12 @@
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-
-            <!-- Add Navigation -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
         <!-- End Swiper -->
+
+        <!-- Add Navigation (Moved Outside Swiper Container) -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
     </div>
     <!-- Swiper JS -->
@@ -116,5 +116,9 @@
     <!-- Your Custom JS -->
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/globe.js"></script>
+
+    <!-- ADDED: Div for the globe info pop-up -->
+    <div id="info-popup" style="display: none; position: absolute; background: rgba(255, 255, 255, 0.9); border: 1px solid #ccc; border-radius: 4px; padding: 8px; font-size: 12px; z-index: 1000; pointer-events: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"></div>
+
 </body>
 </html> 

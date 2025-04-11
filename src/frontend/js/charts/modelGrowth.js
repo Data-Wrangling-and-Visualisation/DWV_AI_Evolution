@@ -280,7 +280,7 @@ async function createModelGrowthChart() {
                 plugins: {
                     legend: {
                         position: 'top',
-                        align: 'start',
+                        align: 'center',
                         labels: {
                             padding: 20,
                             boxWidth: 20,

@@ -260,7 +260,7 @@ async function createModelPopularityChart() {
                 maintainAspectRatio: false,
                 interaction: {
                     mode: 'nearest',
-                    intersect: true
+                    intersect: false
                 },
                 layout: {
                     padding: {
@@ -342,7 +342,7 @@ async function createModelPopularityChart() {
                     tooltip: {
                         enabled: true,
                         mode: 'nearest',
-                        intersect: true,
+                        intersect: false,
                         backgroundColor: 'rgba(0, 0, 0, 0.85)',
                         titleFont: { size: 14, weight: 'bold' },
                         bodyFont: { size: 12 },
