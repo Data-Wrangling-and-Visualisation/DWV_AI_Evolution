@@ -37,13 +37,29 @@ h2 {
 }
 
 .chart-container {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    height: 500px; /* Default height for regular charts */
-    overflow: hidden; /* Prevent content from overflowing */
+    /* Remove max-width, width, and margin: auto to allow full width in Swiper */
+    /* max-width: 900px; */ /* REMOVED */
+    /* width: 95%; */ /* REMOVED */
+    /* margin: 20px auto; */ /* REMOVED */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 600px; /* Default height, adjust as needed */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+/* Style for the chart titles */
+.chart-container h2 {
+    text-align: left; /* Align title text to the left */
+    width: 100%; /* Ensure h2 takes full width of container */
+    margin-bottom: 20px; /* Space below title */
+    color: #1a202c; /* Darker text color */
+    font-size: 1.5rem; /* Adjust size as needed */
 }
 
 /* Specific heights for different chart types */
@@ -255,11 +271,9 @@ body {
 }
 
 #country-list li {
-    font-size: 0.85rem; /* Adjust size */
-    color: #2d3748;
-    margin-bottom: 0.4rem;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    cursor: default; /* Or pointer if interactive */
 }
 
 #country-list li span:first-child {
@@ -441,4 +455,43 @@ body {
 
 .data-sources a:hover {
     text-decoration: underline;
+}
+
+/* Add some basic styling for the D3 container */
+#orgBubbleChartD3Container {
+    /* Ensure it fills the swiper slide */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically if needed */
+    align-items: center; /* Center horizontally */
+    overflow: hidden; /* Prevent SVG overflow issues */
+}
+
+#orgBubbleChartD3 {
+    width: 100%;
+    max-width: 700px; /* Adjust max-width as needed */
+    height: 500px; /* Adjust height as needed */
+    margin-top: 20px; /* Space below the title */
+}
+
+#orgBubbleChartD3 svg {
+    display: block; /* Remove extra space below SVG */
+    margin: auto; /* Center SVG if container is wider */
+}
+
+/* Styling for D3 tooltips (if added via JS) */
+.d3-tooltip {
+    position: absolute;
+    z-index: 1070; /* Ensure it's above other elements */
+    visibility: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #333;
+    pointer-events: none; /* Important! */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    white-space: nowrap; /* Prevent tooltip text wrapping */
 }
