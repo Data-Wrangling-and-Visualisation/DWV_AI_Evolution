@@ -28,7 +28,7 @@ function normalizeCountryName(name) {
     return countryNameMap[name] || name.trim(); // Trim whitespace too
 }
 
-async function initGlobe() {
+export async function initGlobe() {
     console.log('Initializing globe...'); // DEBUG
     const container = document.getElementById('globe-container');
     const countryListElement = document.getElementById('country-list'); // RE-ADDED
@@ -381,10 +381,4 @@ async function initGlobe() {
 }
 
 // Export the hide function and potentially initGlobe if needed elsewhere
-export { initGlobe, hideInfoPopup };
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGlobe);
-} else {
-    initGlobe();
-} 
+export { hideInfoPopup };

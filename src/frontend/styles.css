@@ -187,6 +187,12 @@ canvas {
     opacity: 1;
 }
 
+/* Add margin to push pagination down */
+.swiper-pagination {
+    margin-top: 20px; /* Adjust this value as needed */
+    position: relative; /* Helps ensure margin is applied correctly */
+}
+
 /* Optional: Add some more visual flair */
 body {
     background-color: #f0f2f5; /* Lighter background */
@@ -351,4 +357,88 @@ body {
 .chart-container {
   margin-bottom: 20px; 
 }
-*/ 
+*/
+
+/* Specific styles to adjust padding for the Top Downloads chart slide - COMMENTED OUT */
+/*
+.swiper-slide:nth-child(6) .chart-container {
+    padding-bottom: 4rem; /* Increased bottom padding to prevent overlap with pagination */
+/* } */
+
+/* Preview Screen Styles */
+#preview-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #e9ecef; /* Light gray background */
+    padding: 2rem;
+}
+
+#preview-screen h1 {
+    font-size: 3rem;
+    color: #343a40; /* Darker heading color */
+    margin-bottom: 1rem;
+}
+
+#preview-screen p {
+    font-size: 1.2rem;
+    color: #495057; /* Slightly lighter text color */
+    max-width: 700px;
+    margin-bottom: 1rem; /* Reduced margin */
+    line-height: 1.7;
+}
+
+#proceed-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#proceed-button:hover {
+    background-color: #0056b3; /* Darker hover color */
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important;
+}
+
+.data-sources {
+    margin-top: 0.5rem; /* Reduced margin */
+    margin-bottom: 1rem; /* Reduced margin */
+    font-size: 0.9rem;
+    color: #6c757d; /* Gray color for subtlety */
+}
+
+.data-sources p {
+    margin-bottom: 0.2rem; /* Reduced margin */
+    font-weight: bold;
+    color: #495057;
+}
+
+.data-sources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-sources li {
+    margin-bottom: 0.3rem;
+}
+
+.data-sources a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.data-sources a:hover {
+    text-decoration: underline;
+}
