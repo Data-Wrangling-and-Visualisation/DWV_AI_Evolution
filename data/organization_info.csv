@@ -1,0 +1,52 @@
+name,numUsers,numModels,numFollowers,country,city,latitude,longitude
+deepseek-ai,29,68,46609,China,Hangzhou,30.2489634,120.2052342
+microsoft,231,363,10347,U.S.,Redmond,47.6694141,-122.1238767
+CohereForAI,54,16,1266,Canada,Toronto,43.6534817,-79.3839347
+tencent,123,10,2528,China,Shenzhen,22.5445741,114.0545429
+allenai,158,396,2844,U.S.,Seattle,47.6038321,-122.330062
+Lightricks,22,4,623,Israel,Jerusalem,31.7788242,35.2257626
+openai,64,33,6038,United States,San Francisco,37.7792588,-122.4193286
+mistralai,72,23,6203,France,Paris,48.8588897,2.3200410217200766
+amd,189,99,1400,United States,Santa Clara,37.3541132,-121.955174
+BAAI,64,128,1399,China,Beijing,40.190632,116.412144
+nvidia,1911,291,18719,U.S.,Santa Clara,37.3541132,-121.955174
+mlx-community,2429,1747,4142,U.S.,Sunnyvale,37.3688301,-122.036349
+yandex,12,3,230,Russia,Moscow,55.625578,37.6063916
+google,2092,968,9674,U.S.,Mountain View,37.3893889,-122.0832101
+Salesforce,400,139,1142,United States,San Francisco,37.7792588,-122.4193286
+Skywork,37,19,335,Switzerland,Belp,46.88978,7.498388
+ByteDance,387,19,1478,China,Haidian,39.9580718,116.292405
+MiniMaxAI,40,2,573,China,Shanghai,31.2312707,121.4700152
+MBZUAI,199,77,373,United Arab Emirates,Masdar City,24.42748265,54.6234876171374
+bytedance-research,11,11,335,China,Beijing,40.190632,116.412144
+open-r1,31,3,1230,China,Hangzhou,30.2489634,120.2052342
+t-tech,13,7,298,United States,Buffalo,42.8867166,-78.8783922
+SakanaAI,24,20,348,Japan,Tokyo,35.6768601,139.7638947
+TIGER-Lab,27,59,225,China,Hangzhou,30.2489634,120.2052342
+lmsys,4,24,593,France,Paris,48.8588897,2.3200410217200766
+amazon,2214,11,2859,U.S.,Seattle,47.6038321,-122.330062
+alibaba-pai,259,85,430,China,Hangzhou,30.2489634,120.2052342
+NovaSky-AI,3,8,367,Israel,Eshkol Regional Council,31.2542528,34.40944531554104
+cyberagent,169,19,514,Japan,Tokyo,35.6768601,139.7638947
+PekingU,346,11,385,China,Beijing,40.190632,116.412144
+Rakuten,121,7,204,Japan,Tokyo,35.6768601,139.7638947
+Intel,1836,219,2342,United States,Santa Clara,37.3541132,-121.955174
+espnet,145,536,216,USA,Bristol,51.4538022,-2.5972985
+huggingface,209,16,25882,United States,New York City,40.7127281,-74.0060152
+cerebras,100,17,518,US,Sunnyvale,37.3688301,-122.036349
+Cohere,25,11,221,Canada,Toronto,43.6534817,-79.3839347
+databricks,619,6,1230,United States,San Francisco,37.7792588,-122.4193286
+cisco-ai,817,3,968,U.S.,San Jose,37.3361663,-121.890591
+Salesforce,400,139,1142,United States,San Francisco,37.7792588,-122.4193286
+01-ai,33,28,665,China,Beijing,40.190632,116.412144
+OpenLLM-France,103,11,257,France,Paris,48.8588897,2.3200410217200766
+Mozilla,15,47,226,United States,San Francisco,37.7792588,-122.4193286
+MediaTek-Research,21,17,223,Taiwan,Hsinchu,24.8066333,120.9686833
+qualcomm,13,181,471,U.S.,San Diego,32.7174202,-117.162772
+QuantFactory,3,1344,427,US,Old Greenwich,41.022875,-73.564846
+instructlab,22,7,307,United States,Armonk,41.132973,-73.71260642942585
+infosys,663,2,717,India,Bengaluru,12.98815675,77.62260003796
+Groq,47,2,206,US,Mountain View,37.3893889,-122.0832101
+Kwai-Kolors,14,8,778,Poland,,52.215933,19.134422
+mistral-community,23,14,248,France,Paris,48.8588897,2.3200410217200766
+Samsung,600,2,655,South Korea,Seoul,37.5666791,126.9782914

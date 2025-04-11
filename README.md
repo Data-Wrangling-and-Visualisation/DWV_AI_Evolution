@@ -6,6 +6,10 @@ This project aims to create a data visualization platform to explore the evoluti
 
 The intended audience includes AI researchers, data scientists, industry professionals, and enthusiasts who want to understand how the field has progressed. The visualizations will help users identify important milestones, track emerging trends, and compare different models and communities.
 
+## Live Demo
+
+A live version of the application is hosted at: [http://e-order.ru:5001](http://e-order.ru:5001)
+
 ## Dataset Description
 
 ### Data Source and Collection Plan
@@ -61,6 +65,18 @@ The application will use the standard data visualization pipeline:
    - Use D3.js for interactive visualizations.
    - Develop an intuitive interface for exploring AI model evolution.
 
+## Repository Structure
+
+The project is organized into the following main directories:
+
+-   `src/`: Contains the core application code:
+    -   `data_collection/`: Scripts for collecting data from Hugging Face, Wikipedia, and GitHub.
+    -   `backend/`: The Flask application serving the collected data via a REST API.
+    -   `frontend/`: The HTML, CSS, and JavaScript files for the user interface and interactive visualizations.
+    -   `visualization/`: Contains Jupyter notebooks used for Exploratory Data Analysis (EDA).
+-   `data/`: Stores the collected raw and/or processed data files (e.g., CSV, JSON).
+-   `images/`: Contains screenshots used in the README and potentially other static image assets.
+
 ## Proposed Visualizations and Features
 
 1. **Bubble Chart (Model Properties)**
@@ -104,6 +120,19 @@ This checkpoint marks the implementation of several key components:
         - Top Organizations by Followers (Bar Chart - D3.js)
         - Top Organizations by Contributors (Bar Chart - D3.js)
 4.  **Containerization**: Packaged the application components (backend, frontend, database) into Docker containers and orchestrated them using Docker Compose for easier setup and deployment.
+
+## Screenshots
+
+Here are some examples of the visualizations:
+
+**Model Popularity & Size Evolution (Bubble Chart):**
+![Model Bubble Chart](images/bubble.png)
+
+**Model Growth Over Time (Stacked Area Chart):**
+![Model Growth Chart](images/growth.png)
+
+**Organization Locations (3D Globe):**
+![Organization Globe](images/globe.png)
 
 ## Acknowledgments
 
