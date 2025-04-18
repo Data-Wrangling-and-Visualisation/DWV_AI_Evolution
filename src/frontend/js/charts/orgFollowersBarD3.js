@@ -1,13 +1,16 @@
+import { getOrganizationData } from '../dataService.js';
+
 export async function createOrgFollowersBarD3() {
-    const apiUrl = '/api/organizations-info';
+    // const apiUrl = '/api/organizations-info'; // Removed
     let data;
     try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        data = await response.json();
-        console.log("Fetched organizations data for D3 Followers Bar:", data);
+        // const response = await fetch(apiUrl); // Removed
+        // if (!response.ok) { // Removed
+        //     throw new Error(`HTTP error! status: ${response.status}`); // Removed
+        // } // Removed
+        // data = await response.json(); // Removed
+        data = await getOrganizationData(); // Added
+        console.log("Fetched organizations data for D3 Followers Bar via service:", data); // Updated log
     } catch (error) {
         console.error('Error fetching or parsing organizations data:', error);
         const container = document.getElementById('orgFollowersBarD3');

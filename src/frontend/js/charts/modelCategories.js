@@ -1,8 +1,26 @@
-import { fetchAndTransformData, countAndSortCategories } from '../utils/dataTransform.js';
+import { getModelData } from '../dataService.js';
+// import { fetchAndTransformData, countAndSortCategories } from '../utils/dataTransform.js'; // Removed
+
+// Function to count and sort categories (inlined from deleted dataTransform.js)
+function countAndSortCategories(data, categoryField) {
+    const count = data.reduce((acc, item) => {
+        const category = item[categoryField];
+        if (category) {
+            acc[category] = (acc[category] || 0) + 1;
+        }
+        return acc;
+    }, {});
+
+    return Object.entries(count)
+        .sort(([,a], [,b]) => b - a);
+}
 
 async function createModelCategoryChart() {
-    // Get and transform data
-    const data = await fetchAndTransformData();
+    // Get data from the service
+    const data = await getModelData();
+    // const data = await fetchAndTransformData(); // Removed
+    
+    // Count and sort categories using the inlined function
     const sortedCategories = countAndSortCategories(data, 'model_category');
 
     // Prepare data for the chart

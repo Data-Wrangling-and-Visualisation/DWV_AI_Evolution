@@ -1,4 +1,4 @@
-import { fetchAndTransformData } from '../utils/dataTransform.js';
+import { getModelData } from '../dataService.js';
 
 // Register the zoom plugin if needed
 if (Chart.register) {
@@ -8,9 +8,10 @@ if (Chart.register) {
 // Set up the bubble chart
 async function createModelPopularityChart() {
     try {
-        // Get and transform data
-        const data = await fetchAndTransformData();
-        console.log("Fetched data for bubble chart:", data.length, "items");
+        // Get data from the service
+        const data = await getModelData();
+        
+        console.log("Fetched data for bubble chart via service:", data.length, "items");
         
         // Create sample data if no real data available
         let processedData = [];

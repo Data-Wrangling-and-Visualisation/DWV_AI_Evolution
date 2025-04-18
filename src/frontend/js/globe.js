@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { getOrganizationData } from './dataService.js'; // Fixed import path
 
 // ADD: Raycaster and mouse vector
 const raycaster = new THREE.Raycaster();
@@ -198,11 +199,13 @@ export async function initGlobe() {
     const markers = [];
 
     try {
-        const response = await fetch('/api/organizations-info');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const organizations = await response.json();
+        // const response = await fetch('/api/organizations-info'); // Removed
+        // if (!response.ok) { // Removed
+        //     throw new Error(`HTTP error! status: ${response.status}`); // Removed
+        // } // Removed
+        // const organizations = await response.json(); // Removed
+        const organizations = await getOrganizationData(); // Use data service
+        console.log("Fetched organization data for globe via service:", organizations.length); // Updated log
 
         const markerGeometry = new THREE.SphereGeometry(0.015, 16, 16); // Slightly larger marker
         const markerMaterial = new THREE.MeshBasicMaterial({ color: 0x3A59D1 }); // Changed color to light blue

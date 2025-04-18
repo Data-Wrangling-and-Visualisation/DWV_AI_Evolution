@@ -1,8 +1,8 @@
-import { fetchAndTransformData } from '../utils/dataTransform.js';
+import { getModelData } from '../dataService.js';
 
 async function createTopCreatorsChart() {
-    // Get and transform data
-    const data = await fetchAndTransformData();
+    // Get data from the service
+    const data = await getModelData();
     
     // Count models by creator
     const creatorCount = data.reduce((acc, model) => {

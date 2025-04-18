@@ -1,13 +1,16 @@
+import { getOrganizationData } from '../dataService.js';
+
 export async function createOrgBubbleChartD3() {
-    const apiUrl = '/api/organizations-info';
+    // const apiUrl = '/api/organizations-info'; // Removed
     let data;
     try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        data = await response.json();
-        console.log("Fetched organizations data for D3:", data);
+        // const response = await fetch(apiUrl); // Removed
+        // if (!response.ok) { // Removed
+        //     throw new Error(`HTTP error! status: ${response.status}`); // Removed
+        // } // Removed
+        // data = await response.json(); // Removed
+        data = await getOrganizationData(); // Added
+        console.log("Fetched organizations data for D3 via service:", data); // Updated log message
     } catch (error) {
         console.error('Error fetching or parsing organizations data:', error);
         const container = document.getElementById('orgBubbleChartD3');

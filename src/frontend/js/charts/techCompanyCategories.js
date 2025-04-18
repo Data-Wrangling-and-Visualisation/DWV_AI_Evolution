@@ -1,8 +1,10 @@
-import { fetchAndTransformData } from '../utils/dataTransform.js';
+import { getModelData } from '../dataService.js';
+// import { fetchAndTransformData } from '../utils/dataTransform.js'; // Removed
 
 async function createTechCompanyCategoriesChart() {
-    // Get and transform data
-    const data = await fetchAndTransformData();
+    // Get data from the service
+    const data = await getModelData();
+    // const data = await fetchAndTransformData(); // Removed
     
     // Define major companies and their standardized names
     const companyMappings = {

@@ -1,11 +1,14 @@
-import { fetchAndTransformData } from '../utils/dataTransform.js';
+import { getModelData } from '../dataService.js';
+// import { fetchAndTransformData } from '../utils/dataTransform.js'; // Removed
 
 // Function to create the model growth chart
 async function createModelGrowthChart() {
     try {
-        // Get and transform data
-        const data = await fetchAndTransformData();
-        console.log("Fetched data for growth chart:", data.length, "items");
+        // Get data from the service
+        const data = await getModelData();
+        // const data = await fetchAndTransformData(); // Removed
+        
+        console.log("Fetched data for growth chart via service:", data.length, "items"); // Updated log
         
         if (!data || data.length === 0) {
             document.getElementById('modelGrowthContainer').innerHTML = 

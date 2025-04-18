@@ -1,8 +1,26 @@
-import { fetchAndTransformData, countAndSortCategories } from '../utils/dataTransform.js';
+import { getModelData } from '../dataService.js';
+// import { fetchAndTransformData, countAndSortCategories } from '../utils/dataTransform.js'; // Removed
+
+// Function to count and sort categories (moved from dataTransform.js)
+function countAndSortCategories(data, categoryField) {
+    const count = data.reduce((acc, item) => {
+        const category = item[categoryField];
+        if (category) {
+            acc[category] = (acc[category] || 0) + 1;
+        }
+        return acc;
+    }, {});
+
+    return Object.entries(count)
+        .sort(([,a], [,b]) => b - a);
+}
 
 async function createTaskCategoriesChart() {
-    // Get and transform data
-    const data = await fetchAndTransformData();
+    // Get data from the service
+    const data = await getModelData();
+    // const data = await fetchAndTransformData(); // Removed
+    
+    // Filter and count categories
     const sortedTasks = countAndSortCategories(data.filter(item => item.task_category), 'task_category');
     
     // Get top 20 and calculate others
