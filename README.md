@@ -1,71 +1,109 @@
-# Visualizing AI Models Evolution Over Time
+<div align="center">
 
-## Project Goal and Vision
+  # Visualizing AI Models Evolution Over Time
 
-This project aims to create a data visualization platform to explore the evolution of machine learning models over time. By analyzing key attributes of models and the communities that develop them, we will provide insights into trends such as model complexity and popularity, distribution of task categories, and the geography of main contributors.
+  **Exploring the dynamic landscape of AI model development through interactive visualization.**
 
-The intended audience includes AI researchers, data scientists, industry professionals, and enthusiasts who want to understand how the field has progressed. The visualizations will help users identify important milestones, track emerging trends, and compare different models and communities.
+  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
+  [![Flask](https://img.shields.io/badge/Flask-2.x-black?logo=flask)](https://flask.palletsprojects.com/)
+  [![Pandas](https://img.shields.io/badge/Pandas-1.x-blue?logo=pandas)](https://pandas.pydata.org/)
+  [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup4-4.x-orange?logo=python&logoColor=yellow)](https://www.crummy.com/software/BeautifulSoup/)
+  [![Groq Cloud](https://img.shields.io/badge/Groq_Cloud-API-F36A00?logo=groq)](https://groq.com/)
+  [![Geopy](https://img.shields.io/badge/Geopy-2.x-blue)](https://github.com/geopy/geopy)
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/CSS)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![D3.js](https://img.shields.io/badge/D3.js-7.x-orange?logo=d3.js)](https://d3js.org/)
+  [![Three.js](https://img.shields.io/badge/Three.js-r140%2B-black?logo=three.js)](https://threejs.org/)
+  [![Chart.js](https://img.shields.io/badge/Chart.js-3.x-red?logo=chart.js)](https://www.chartjs.org/)
+  [![Swiper.js](https://img.shields.io/badge/Swiper.js-8.x-6332F6?logo=swiper)](https://swiperjs.com/)
+  [![Docker](https://img.shields.io/badge/Docker-Compose-blue?logo=docker)](https://www.docker.com/)
+  [![Live Demo](https://img.shields.io/badge/Live_Demo-Online-brightgreen)](http://e-order.ru:5001)
+  
 
-## Live Demo
+</div>
 
-A live version of the application is hosted at: [http://e-order.ru:5001](http://e-order.ru:5001)
+## 🎯 Project Overview
+This project provides a data visualization platform to explore the evolution of machine learning models over time. By analyzing key attributes of models (size, popularity, category) and the communities developing them (location, contributions), we offer insights into trends within the AI field.
 
-## Dataset Description
+**Target Audience**: AI researchers, data scientists, industry professionals, and enthusiasts seeking to understand AI progression, identify milestones, track trends, and compare models/communities.
 
-### Data Source and Collection Plan
 
-- **Models Metadata**: We will fetch metadata about AI models from HuggingFace, the leading open-source platform for sharing AI models.
-- **Communities Geolocation**: We will manually scrape data on communities that developed these models from HuggingFace and extract additional company details from Wikipedia and GitHub.
-- **Twitter Posts**: We will scrape Twitter posts about AI models to track the popularity of certain models by counting the number of mentions of these models in tweets. The model names to scrape for will be obtained from the HuggingFace metadata we collect.
+## 🌐 Live Demo
+Explore the interactive application hosted at:
+**[http://e-order.ru:5001](http://e-order.ru:5001)**
 
-To manipulate HTML, we will use BeautifulSoup4 (BS4) and Selenium. BS4 will help us parse HTML content while Selenium will handle dynamic JavaScript-rendered pages. We'll manage rate limits by adding appropriate delays between requests.
+## 🚀 Getting Started (Docker)
 
-For the sake of this project, we will collect the dataset only once. However, due to the intensive development speed in the sphere, continuous dataset updates should be performed.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Data-Wrangling-and-Visualisation/DWV_AI_Evolution
+    ```
+2.  **(Optional) Configure Environment:** If needed, create and populate a `.env` file. Here's an example:
+    ```dotenv
+    # .env
+    HF_TOKEN=hf_YOUR_HUGGINGFACE_TOKEN
+    GROQ_API_KEY=gsk_YOUR_GROQ_API_KEY
+    GROQ_MODEL=deepseek-r1-distill-llama-70b # Or your preferred model
+    ```
+3.  **Build and run containers:**
+    ```bash
+    docker-compose up --build -d
+    ```
+4.  **Access the application:** Open your browser and navigate to `http://localhost:5001` (or the configured frontend port).
+
+## 📊 Dataset
+
+### Data Sources
+| Source | Purpose | Tools Used |
+|---|---|---|
+| **HuggingFace** | Fetch core AI model metadata & organization info | Hugging Face API, `requests` |
+| **Wikipedia** | Scrape additional company/organization details | `BeautifulSoup4` |
+| **GitHub** | Scrape additional company/organization details | `BeautifulSoup4` |
 
 ### Data Content
+- **Models**: Size, downloads, likes, task/model category, creators, publish date, Twitter mentions.
+- **Communities**: Name, location, models developed.
 
-We will collect data about two main entities: AI models and communities that developed them.
+*Note: The dataset was collected once for this project. Continuous updates are recommended for ongoing relevance.*
 
-- **Models**
-  - Model size
-  - Number of downloads
-  - Number of likes
-  - Task category
-  - Model category
-  - Model creators
-  - Date of publishing
-  - Number of mentions on Twitter
+## 🏗️ Architecture & Pipeline
+The application follows a standard data visualization pipeline:
+1.  **Data Collection**: Fetch model data via Hugging Face API; scrape community details from Hugging Face, Wikipedia, GitHub.
+2.  **Preprocessing**: Clean and transform data using Pandas; use Groq AI for structured data extraction from web pages; enrich organization data with coordinates using `geopy`.
+3.  **EDA**: Analyze trends (model growth, popularity, geographic distribution) using notebooks (located in `src/visualization/`).
+4.  **Storage & API**: Store processed data in JSON files; serve data via a Flask REST API.
+5.  **Visualization**: Render interactive charts and the 3D globe using D3.js, Chart.js, and Three.js in the frontend.
 
-- **Communities**
-  - Community name
-  - Location
-  - Models developed by the community
+## 🛠️ Technologies Used
 
-## Visualization App Architecture
+### Backend & Data Handling
+| Technology | Role |
+|---|---|
+| ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python) | Backend logic, data collection scripts |
+| ![Flask](https://img.shields.io/badge/Flask-2.x-000000?logo=flask) | REST API development to serve data |
+| ![Pandas](https://img.shields.io/badge/Pandas-1.x-150458?logo=pandas) | Data cleaning, preprocessing, transformation |
+| ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup4-4.x-orange) | HTML parsing for web scraping |
+| ![Groq Cloud](https://img.shields.io/badge/Groq_Cloud-API-F36A00?logo=groq) | AI for data extraction & inference |
+| ![Geopy](https://img.shields.io/badge/Geopy-2.x-blue) | Geolocation data retrieval |
 
-The application will use the standard data visualization pipeline:
+### Frontend & Visualization
+| Technology | Role |
+|---|---|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) | Structure of the web application |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) | Styling the user interface |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript) | Interactivity, API communication, UI logic |
+| ![D3.js](https://img.shields.io/badge/D3.js-7.x-F9A03C?logo=d3.js) | Interactive data visualizations (Bubble charts, Bar charts) |
+| ![Three.js](https://img.shields.io/badge/Three.js-r140%2B-000000?logo=three.js) | 3D Globe visualization for organization locations |
+| ![Chart.js](https://img.shields.io/badge/Chart.js-3.x-FF6384?logo=chart.js) | Various charts (Pie, Bar, Bubble, Stacked Area) |
+| ![Swiper.js](https://img.shields.io/badge/Swiper.js-8.x-6332F6?logo=swiper) | Carousel component for navigation |
 
-1. **Data Collection**
-   - Fetch AI model data using Hugging Face API in JSON format.
-   - Scrape additional model details and company data from Hugging Face, Wikipedia, Twitter, and GitHub using BeautifulSoup and Selenium.
+### Deployment
+| Technology | Role |
+|---|---|
+| ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker) | Containerization and orchestration |
 
-2. **Data Cleaning and Preprocessing**
-   - Use Pandas to filter unnecessary fields, handle missing values, and transform timestamps to Python format.
-
-3. **Exploratory Data Analysis (EDA)**
-   - Analyze how model sizes have grown and evolved over time.
-   - Estimate model popularity across different categories.
-   - Map the geographic distribution of model creators.
-
-4. **Data Storage and API**
-   - Store processed data in a PostgreSQL database.
-   - Develop a REST API using Python and FastAPI to serve the data.
-
-5. **Data Visualization**
-   - Use D3.js for interactive visualizations.
-   - Develop an intuitive interface for exploring AI model evolution.
-
-## Repository Structure
+## 📂 Repository Structure
 
 The project is organized into the following main directories:
 
@@ -77,26 +115,19 @@ The project is organized into the following main directories:
 -   `data/`: Stores the collected raw and/or processed data files (e.g., CSV, JSON).
 -   `images/`: Contains screenshots used in the README and potentially other static image assets.
 
-## Proposed Visualizations and Features
+## 🖼️ Visualization Highlights
 
-1. **Bubble Chart (Model Properties)**
-   - X-axis: Model publishing date
-   - Y-axis: Number of likes
-   - Bubble size: Model size
-   - Filters: Task category, model category, model creators
+Examples of visualizations available in the application:
 
-2. **Stacked Area Chart (Model Growth Over Time)**
-   - X-axis: Date of model publishing
-   - Y-axis: Number of models
-   - Stacked by: Task categories (e.g., text generation, classification) grouped by model type (Multimodal, Computer Vision, Natural Language Processing)
+**Model Popularity & Size Evolution (Bubble Chart):**
+![Model Bubble Chart](images/bubble.png)
 
-3. **Global Map (Company Locations)**
-   - Shows where the top AI communities are located.
-   - Helps to understand the most influential communities and their distribution by country.
+**Model Growth Over Time (Stacked Area Chart):**
+![Model Growth Chart](images/growth.png)
 
-4. **Bar Chart Race (Model Popularity Over Time)**
-   - Shows dynamic changes in models' popularity, measured by the number of mentions on Twitter.
-   - Each bar represents a model, where its length and position in ranking show popularity. Bars dynamically change in length and ranking to reflect popularity shifts over time.
+**Organization Locations (3D Globe):**
+![Organization Globe](images/globe.png)
+
 
 ## Checkpoint 2
 
@@ -121,27 +152,3 @@ This checkpoint marks the implementation of several key components:
         - Top Organizations by Contributors (Bar Chart - D3.js)
 4.  **Containerization**: Packaged the application components (backend, frontend, database) into Docker containers and orchestrated them using Docker Compose for easier setup and deployment.
 
-## Screenshots
-
-Here are some examples of the visualizations:
-
-**Model Popularity & Size Evolution (Bubble Chart):**
-![Model Bubble Chart](images/bubble.png)
-
-**Model Growth Over Time (Stacked Area Chart):**
-![Model Growth Chart](images/growth.png)
-
-**Organization Locations (3D Globe):**
-![Organization Globe](images/globe.png)
-
-## Acknowledgments
-
-- **Data Sources**:
-    - HuggingFace for providing the model metadata.
-    - Wikipedia and GitHub for additional company/organization details.
-- **Technologies & Libraries**:
-    - The open-source community for essential tools like:
-        - *Backend*: Flask
-        - *Data Handling*: Pandas, BeautifulSoup
-        - *Frontend*: Chart.js, D3.js, Swiper.js, Three.js
-        - *Containerization*: Docker, Docker Compose
