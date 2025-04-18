@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { getOrganizationData } from './dataService.js'; // Fixed import path
+import { getOrganizationData } from '../dataService.js'; // Fixed import path
 
 // ADD: Raycaster and mouse vector
 const raycaster = new THREE.Raycaster();

@@ -7,9 +7,9 @@ import { createTechCompanyCategoriesChart } from './charts/techCompanyCategories
 import { createTopDownloadsChart } from './charts/topDownloads.js';
 import { createModelPopularityChart } from './charts/modelPopularity.js';
 import { createModelGrowthChart } from './charts/modelGrowth.js';
-import { createOrgBubbleChartD3 } from './charts/orgBubbleChartD3.js';
-import { createOrgFollowersBarD3 } from './charts/orgFollowersBarD3.js'; // Import Followers Bar Chart
-import { createOrgUsersBarD3 } from './charts/orgUsersBarD3.js'; // Import Users Bar Chart
+import { createOrgBubbleChart } from './charts/orgBubbleChart.js';
+import { createOrgFollowersBar } from './charts/orgFollowersBar.js'; // Import Followers Bar Chart
+import { createOrgUsersBar } from './charts/orgUsersBar.js'; // Import Users Bar Chart
 // Removed: import { hideInfoPopup } from './globe.js'; - will be handled in preview.js
 
 // Function to initialize Swiper (reinstated)
@@ -68,9 +68,9 @@ export async function initializeAllCharts() {
         await createTopDownloadsChart();
         await createModelPopularityChart();
         await createModelGrowthChart();
-        await createOrgBubbleChartD3();
-        await createOrgFollowersBarD3(); // Initialize Followers Bar Chart
-        await createOrgUsersBarD3(); // Initialize Users Bar Chart
+        await createOrgBubbleChart();
+        await createOrgFollowersBar(); // Initialize Followers Bar Chart
+        await createOrgUsersBar(); // Initialize Users Bar Chart
         console.log("All charts initialized successfully.");
     } catch (error) {
         console.error("Error initializing charts:", error);

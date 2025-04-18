@@ -1,6 +1,6 @@
 import { getOrganizationData } from '../dataService.js';
 
-export async function createOrgUsersBarD3() {
+export async function createOrgUsersBar() {
     // const apiUrl = '/api/organizations-info'; // Removed
     let data;
     try {

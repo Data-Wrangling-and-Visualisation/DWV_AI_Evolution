@@ -1,5 +1,6 @@
-import { initGlobe, hideInfoPopup } from './globe.js'; // Import initGlobe and hideInfoPopup
+import { initGlobe, hideInfoPopup } from './charts/globe.js'; // Import initGlobe and hideInfoPopup
 import { initializeSwiper, initializeAllCharts } from './main.js'; // Import initializers
+import { getModelData } from './dataService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const previewScreen = document.getElementById('preview-screen');

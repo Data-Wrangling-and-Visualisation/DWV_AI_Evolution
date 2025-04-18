@@ -1,6 +1,6 @@
 import { getOrganizationData } from '../dataService.js';
 
-export async function createOrgBubbleChartD3() {
+export async function createOrgBubbleChart() {
     // const apiUrl = '/api/organizations-info'; // Removed
     let data;
     try {
