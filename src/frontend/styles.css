@@ -38,47 +38,37 @@ h2 {
 
 .chart-container {
     position: relative;
-    /* Remove max-width, width, and margin: auto to allow full width in Swiper */
-    /* max-width: 900px; */ /* REMOVED */
-    /* width: 95%; */ /* REMOVED */
-    /* margin: 20px auto; */ /* REMOVED */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 600px; /* Default height, adjust as needed */
+    height: 600px; 
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
-/* Style for the chart titles */
 .chart-container h2 {
-    text-align: left; /* Align title text to the left */
-    width: 100%; /* Ensure h2 takes full width of container */
-    margin-bottom: 20px; /* Space below title */
-    color: #1a202c; /* Darker text color */
-    font-size: 1.5rem; /* Adjust size as needed */
+    text-align: left;
+    width: 100%; 
+    margin-bottom: 20px;
+    color: #1a202c; 
+    font-size: 1.5rem;
 }
 
-/* Specific heights for different chart types */
-.chart-container:nth-child(3),  /* Task Categories */
-.chart-container:nth-child(6) { /* Top Downloads */
-    height: 800px; /* Taller height for horizontal bar charts */
+.chart-container:nth-child(3),  
+.chart-container:nth-child(6) { 
+    height: 800px;
 }
 
-.chart-container:nth-child(7) { /* Top 5 Models by Downloads for Major Tech Companies */
-    height: 900px; /* Even taller height for the tech companies chart */
+.chart-container:nth-child(7) {
+    height: 900px; 
 }
 
 .chart-container.bubble-chart {
-    /* height: 1000px !important; */ /* Removed fixed height */
     margin-bottom: 2rem;
 }
 
 .chart-container.growth-chart {
-    /* height: 900px !important; */ /* Removed fixed height */
     margin-bottom: 2rem;
 }
 
@@ -103,35 +93,28 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Canvas styles */
 canvas {
     display: block !important;
     max-width: 100% !important;
     height: 100% !important;
 }
 
-/* Specific styles for the bubble chart canvas */
 #modelPopularityChart {
-    /* height: 900px !important; */ /* Removed fixed height */
 }
 
-/* Specific styles for the tech companies chart */
 #topDownloadsChart {
     height: 800px !important;
 }
 
-/* Specific styles for the growth chart */
 #modelGrowthChart {
-    /* height: 800px !important; */ /* Removed fixed height */
 }
 
-/* Swiper Carousel Styles */
 .model-carousel {
     width: 100%;
-    max-width: 1200px; /* Limit max width */
-    height: 650px; /* Set a fixed height for the carousel */
-    margin: 30px auto; /* Center the carousel */
-    overflow: hidden; /* Hide overflow */
+    max-width: 1200px;
+    height: 650px; 
+    margin: 30px auto;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -141,36 +124,33 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Ensure slide takes full height */
-    padding: 20px; /* Add padding inside the slide */
+    height: 100%; 
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .swiper-slide .chart-container {
     width: 100%;
-    height: 100%; /* Make chart container take full slide height */
+    height: 100%; 
     display: flex;
     flex-direction: column;
-    /* Reset margin/padding if needed */
     margin: 0;
     padding: 15px;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: none; /* Remove individual shadow if carousel has one */
-    min-height: 500px; /* Ensure a minimum height for content like the globe */
+    box-shadow: none; 
+    min-height: 500px;
 }
 
-/* Adjust canvas size within container */
 .swiper-slide .chart-container canvas {
-    flex-grow: 1; /* Allow canvas to grow */
+    flex-grow: 1;
     position: relative;
-    max-height: calc(100% - 50px); /* Subtract title height approx */
+    max-height: calc(100% - 50px);
 }
 
-/* Swiper Navigation Buttons */
 .swiper-button-prev,
 .swiper-button-next {
-    color: #333; /* Darker color for better visibility */
+    color: #333; 
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     width: 44px;
@@ -180,7 +160,7 @@ canvas {
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-    font-size: 20px; /* Adjust icon size */
+    font-size: 20px; 
     font-weight: bold;
 }
 
@@ -189,7 +169,6 @@ canvas {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Swiper Pagination */
 .swiper-pagination-bullet {
     background: #aaa;
     opacity: 0.7;
@@ -203,15 +182,13 @@ canvas {
     opacity: 1;
 }
 
-/* Add margin to push pagination down */
 .swiper-pagination {
-    margin-top: 20px; /* Adjust this value as needed */
-    position: relative; /* Helps ensure margin is applied correctly */
+    margin-top: 20px; 
+    position: relative;
 }
 
-/* Optional: Add some more visual flair */
 body {
-    background-color: #f0f2f5; /* Lighter background */
+    background-color: #f0f2f5; 
 }
 
 .container h1 {
@@ -220,13 +197,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Globe Styles */
 #globe-container {
-    /* width: 100%; */ /* Remove fixed width, let wrapper control */
     height: 100%;
     cursor: grab;
-    flex-grow: 1; /* Allow globe to take remaining space */
-    position: relative; /* Needed for canvas positioning if required */
+    flex-grow: 1;
+    position: relative;
 }
 
 #globe-container canvas {
@@ -235,29 +210,27 @@ body {
     height: 100% !important;
 }
 
-/* Styles for content within the globe slide */
 .globe-slide-content {
     display: flex;
     flex-direction: row;
     height: 100%;
-    flex-grow: 1; /* Allow content to fill chart container */
+    flex-grow: 1; 
     overflow: hidden;
-    position: relative; /* Ensure children are positioned correctly */
+    position: relative;
 }
 
-/* Styles for the sidebar within the slide */
 #country-sidebar {
-    width: 180px; /* Slightly smaller width for slide context */
+    width: 180px; 
     flex-shrink: 0;
     padding-left: 1rem;
     margin-left: 1rem;
     border-left: 1px solid #e2e8f0;
     overflow-y: auto;
-    height: 100%; /* Fill the content wrapper height */
+    height: 100%; 
 }
 
 #country-sidebar h3 {
-    font-size: 1rem; /* Adjust size */
+    font-size: 1rem; 
     color: #4A5568;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
@@ -273,7 +246,7 @@ body {
 #country-list li {
     margin-bottom: 5px;
     font-size: 0.9em;
-    cursor: default; /* Or pointer if interactive */
+    cursor: default;
 }
 
 #country-list li span:first-child {
@@ -282,7 +255,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100px; /* Prevent long names from breaking layout */
+    max-width: 100px; 
 }
 
 #country-list li span:last-child {
@@ -290,96 +263,14 @@ body {
     color: #718096;
 }
 
-/* Styles for the standalone globe container - REMOVED */
-/*
-.chart-container.globe-standalone {
-    height: 800px; 
-    margin-top: 2rem; 
-    padding: 1rem; 
-    display: flex; 
-    flex-direction: column;
-}
-
-.chart-container.globe-standalone h2 {
-    margin-bottom: 1rem; 
-    flex-shrink: 0; 
-}
-
-#globe-wrapper {
-    display: flex;
-    flex-direction: row; 
-    height: 100%;
-    flex-grow: 1; 
-    overflow: hidden; 
-}
-
-#country-sidebar {
-    width: 200px; 
-    flex-shrink: 0; 
-    padding-left: 1rem; 
-    border-left: 1px solid #e2e8f0; 
-    overflow-y: auto; 
-    height: 100%; 
-}
-
-#country-sidebar h3 {
-    font-size: 1.1rem;
-    color: #4A5568;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-#country-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#country-list li {
-    font-size: 0.9rem;
-    color: #2d3748;
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-#country-list li span:first-child {
-    font-weight: 500;
-    margin-right: 0.5rem;
-}
-
-#country-list li span:last-child {
-    font-weight: bold;
-    color: #718096;
-}
-*/
-
-/* Ensure swiper slide chart container has enough height */
 .swiper-slide .chart-container {
-    /* ... existing styles ... */
-    min-height: 500px; /* Ensure a minimum height for content like the globe */
+    min-height: 500px; 
 }
 
-/* Add some space below the tech company categories chart */
 #techCompanyCategoriesChartContainer {
-  margin-bottom: 60px; /* Increased margin to ensure clearance */
+  margin-bottom: 60px; 
 }
 
-/* Optional: Add general bottom margin to all chart containers if needed */
-/*
-.chart-container {
-  margin-bottom: 20px; 
-}
-*/
-
-/* Specific styles to adjust padding for the Top Downloads chart slide - COMMENTED OUT */
-/*
-.swiper-slide:nth-child(6) .chart-container {
-    padding-bottom: 4rem; /* Increased bottom padding to prevent overlap with pagination */
-/* } */
-
-/* Preview Screen Styles */
 #preview-screen {
     display: flex;
     flex-direction: column;
@@ -387,21 +278,21 @@ body {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    background-color: #e9ecef; /* Light gray background */
+    background-color: #e9ecef; 
     padding: 2rem;
 }
 
 #preview-screen h1 {
     font-size: 3rem;
-    color: #343a40; /* Darker heading color */
+    color: #343a40; 
     margin-bottom: 1rem;
 }
 
 #preview-screen p {
     font-size: 1.2rem;
-    color: #495057; /* Slightly lighter text color */
+    color: #495057; 
     max-width: 700px;
-    margin-bottom: 1rem; /* Reduced margin */
+    margin-bottom: 1rem; 
     line-height: 1.7;
 }
 
@@ -409,7 +300,7 @@ body {
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
     color: #fff;
-    background-color: #007bff; /* Primary button color */
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -417,23 +308,22 @@ body {
 }
 
 #proceed-button:hover {
-    background-color: #0056b3; /* Darker hover color */
+    background-color: #0056b3; 
 }
 
-/* Utility class to hide elements */
 .hidden {
     display: none !important;
 }
 
 .data-sources {
-    margin-top: 0.5rem; /* Reduced margin */
-    margin-bottom: 1rem; /* Reduced margin */
+    margin-top: 0.5rem; 
+    margin-bottom: 1rem; 
     font-size: 0.9rem;
-    color: #6c757d; /* Gray color for subtlety */
+    color: #6c757d; 
 }
 
 .data-sources p {
-    margin-bottom: 0.2rem; /* Reduced margin */
+    margin-bottom: 0.2rem; 
     font-weight: bold;
     color: #495057;
 }
@@ -457,33 +347,30 @@ body {
     text-decoration: underline;
 }
 
-/* Add some basic styling for the D3 container */
 #orgBubbleChartD3Container {
-    /* Ensure it fills the swiper slide */
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically if needed */
-    align-items: center; /* Center horizontally */
-    overflow: hidden; /* Prevent SVG overflow issues */
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
 }
 
 #orgBubbleChartD3 {
     width: 100%;
-    max-width: 700px; /* Adjust max-width as needed */
-    height: 500px; /* Adjust height as needed */
-    margin-top: 20px; /* Space below the title */
+    max-width: 700px;
+    height: 500px; 
+    margin-top: 20px;
 }
 
 #orgBubbleChartD3 svg {
-    display: block; /* Remove extra space below SVG */
-    margin: auto; /* Center SVG if container is wider */
+    display: block; 
+    margin: auto; 
 }
 
-/* Styling for D3 tooltips (if added via JS) */
 .d3-tooltip {
     position: absolute;
-    z-index: 1070; /* Ensure it's above other elements */
+    z-index: 1070; 
     visibility: hidden;
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid #ccc;
@@ -491,31 +378,27 @@ body {
     padding: 8px 12px;
     font-size: 12px;
     color: #333;
-    pointer-events: none; /* Important! */
+    pointer-events: none; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    white-space: nowrap; /* Prevent tooltip text wrapping */
+    white-space: nowrap; 
 }
 
-/* Loading Spinner Styles */
 #loading-spinner {
-    position: fixed; /* Fixed position to stay in place */
+    position: fixed; 
     left: 50%;
     top: 50%;
-    width: 60px; /* Size of the spinner */
+    width: 60px; 
     height: 60px;
-    margin-left: -30px; /* Center horizontally */
-    margin-top: -30px; /* Center vertically */
-    border: 8px solid #f3f3f3; /* Light grey border */
-    border-top: 8px solid #3498db; /* Blue border for spinner part */
+    margin-left: -30px;
+    margin-top: -30px; 
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db;
     border-radius: 50%;
-    z-index: 9999; /* Ensure it's on top */
-    animation: spin 1s linear infinite; /* Animation */
+    z-index: 9999; 
+    animation: spin 1s linear infinite; 
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-/* Add this if you want to hide the spinner initially and show it via JS */
-/* .hidden { display: none; } */

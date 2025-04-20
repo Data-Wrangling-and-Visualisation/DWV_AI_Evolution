@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Evolution</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Original Styles -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Chart.js and Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
-    <!-- D3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- Three.js -->
     <script type="importmap">
         {
             "imports": {
@@ -27,17 +24,20 @@
         }
     </script>
 </head>
+
 <body>
     <div id="loading-spinner" class="hidden"></div>
 
     <div id="preview-screen">
         <h1>Welcome to AI Evolution</h1>
-        <p>Explore the evolution of machine learning models over time. This platform provides insights into trends like model complexity, popularity, task distribution, and the geography of contributors.</p>
+        <p>Explore the evolution of machine learning models over time. This platform provides insights into trends like
+            model complexity, popularity, task distribution, and the geography of contributors.</p>
         <div class="data-sources">
             <p>Data sourced from:</p>
             <ul>
                 <li><a href="https://huggingface.co/" target="_blank">HuggingFace</a> (Model Metadata)</li>
-                <li><a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a> & <a href="https://github.com/" target="_blank">GitHub</a> (Community Details)</li>
+                <li><a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a> & <a href="https://github.com/"
+                        target="_blank">GitHub</a> (Community Details)</li>
             </ul>
         </div>
         <button id="proceed-button">Explore Visualizations</button>
@@ -47,66 +47,56 @@
         <div class="container">
             <h1>AI Evolution</h1>
 
-            <!-- Swiper -->
             <div class="swiper model-carousel">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="chart-container">
                             <h2>Model Categories Distribution</h2>
                             <canvas id="modelCategoryChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="chart-container">
                             <h2>Top 20 AI Model Task Categories</h2>
                             <canvas id="taskCategoryChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 7 -->
                     <div class="swiper-slide">
                         <div class="chart-container bubble-chart" id="bubbleChartContainer">
                             <h2>AI Model's Size And Popularity Evolution</h2>
                             <canvas id="modelPopularityChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 8 -->
                     <div class="swiper-slide">
                         <div class="chart-container growth-chart" id="modelGrowthContainer">
                             <h2>Growth of AI Models Over Time</h2>
                             <canvas id="modelGrowthChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="chart-container">
                             <h2>Top 20 Creators</h2>
                             <canvas id="topCreatorsChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 4 -->
                     <div class="swiper-slide">
                         <div class="chart-container">
                             <h2>Major Tech Companie's AI Models</h2>
                             <canvas id="techCompaniesChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 5 -->
                     <div class="swiper-slide">
                         <div class="chart-container" id="techCompanyCategoriesChartContainer">
                             <h2>Major Tech Companie's AI Model Categories</h2>
                             <canvas id="techCompanyCategoriesChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 6 -->
                     <div class="swiper-slide">
                         <div class="chart-container">
                             <h2>Major Tech Companie's Top 5 Models</h2>
                             <canvas id="topDownloadsChart"></canvas>
                         </div>
                     </div>
-                    <!-- Slide 9: Globe -->
                     <div class="swiper-slide">
                         <div class="chart-container">
                             <h2>Organization Locations</h2>
@@ -119,48 +109,40 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 10: D3 Org Bubbles -->
                     <div class="swiper-slide">
                         <div class="chart-container" id="orgBubbleChartD3Container">
                             <h2>Organizations by Model Count</h2>
                             <div id="orgBubbleChartD3"></div>
                         </div>
                     </div>
-                    <!-- Slide 11: D3 Org Followers Bar -->
                     <div class="swiper-slide">
                         <div class="chart-container" id="orgFollowersBarD3Container">
                             <h2>Top 10 Organizations by Followers</h2>
                             <div id="orgFollowersBarD3"></div>
                         </div>
                     </div>
-                     <!-- Slide 12: D3 Org Contributors Bar -->
-                     <div class="swiper-slide">
+                    <div class="swiper-slide">
                         <div class="chart-container" id="orgUsersBarD3Container">
                             <h2>Top 10 Organizations by Contributors</h2>
                             <div id="orgUsersBarD3"></div>
                         </div>
                     </div>
                 </div>
-                <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
-            <!-- End Swiper -->
-
-            <!-- Add Navigation (Moved Outside Swiper Container) -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
         </div>
-        <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- Module Scripts -->
         <script type="module" src="js/preview.js"></script>
-        <!-- REMOVE LATER <script type="module" src="js/globe.js"></script> -->
         <script type="module" src="js/main.js"></script>
         <script type="module" src="js/dataService.js"></script>
 
-        <!-- ADDED: Div for the globe info pop-up -->
-        <div id="info-popup" style="display: none; position: absolute; background: rgba(255, 255, 255, 0.9); border: 1px solid #ccc; border-radius: 4px; padding: 8px; font-size: 12px; z-index: 1000; pointer-events: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"></div>
-    </div> <!-- End #main-content -->
+        <div id="info-popup"
+            style="display: none; position: absolute; background: rgba(255, 255, 255, 0.9); border: 1px solid #ccc; border-radius: 4px; padding: 8px; font-size: 12px; z-index: 1000; pointer-events: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        </div>
+    </div>
 </body>
-</html> 
+
+</html>
